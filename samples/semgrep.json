@@ -1,0 +1,54 @@
+{
+  "version": "1.140.0",
+  "results": [
+    {
+      "check_id": "python.lang.security.audit.formatted-sql-query.formatted-sql-query",
+      "path": "app/app.py",
+      "start": {"line": 98, "col": 12},
+      "end": {"line": 98, "col": 43},
+      "extra": {
+        "message": "Detected possible formatted SQL query. Use parameterized queries instead.",
+        "severity": "WARNING",
+        "metadata": {"cwe": ["CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"]},
+        "lines": "    rows = get_db().execute(sql).fetchall()"
+      }
+    },
+    {
+      "check_id": "python.flask.security.injection.tainted-sql-string.tainted-sql-string",
+      "path": "app/app.py",
+      "start": {"line": 98, "col": 12},
+      "end": {"line": 98, "col": 43},
+      "extra": {
+        "message": "Detected user input used to manually construct a SQL string. This could lead to SQL injection.",
+        "severity": "ERROR",
+        "metadata": {"cwe": ["CWE-89: Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection')"]},
+        "lines": "    rows = get_db().execute(sql).fetchall()"
+      }
+    },
+    {
+      "check_id": "generic.secrets.security.detected-generic-api-key.detected-generic-api-key",
+      "path": "app/app.py",
+      "start": {"line": 89, "col": 1},
+      "end": {"line": 89, "col": 60},
+      "extra": {
+        "message": "Generic API Key detected",
+        "severity": "ERROR",
+        "metadata": {"cwe": ["CWE-798: Use of Hard-coded Credentials"]},
+        "lines": "PAYMENTS_API_KEY = \"<redacted>\""
+      }
+    },
+    {
+      "check_id": "python.flask.security.audit.debug-enabled.debug-enabled",
+      "path": "app/admin.py",
+      "start": {"line": 41, "col": 5},
+      "end": {"line": 41, "col": 24},
+      "extra": {
+        "message": "Detected Flask app with debug=True. Do not deploy to production with this flag enabled.",
+        "severity": "WARNING",
+        "metadata": {"cwe": ["CWE-489: Active Debug Code"]},
+        "lines": "    app.run(debug=True)"
+      }
+    }
+  ],
+  "errors": []
+}

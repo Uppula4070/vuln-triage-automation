@@ -1,0 +1,52 @@
+{
+  "@programName": "ZAP",
+  "@version": "2.16.1",
+  "site": [
+    {
+      "@name": "http://127.0.0.1:5000",
+      "alerts": [
+        {
+          "pluginid": "40018",
+          "alert": "SQL Injection",
+          "name": "SQL Injection",
+          "riskcode": "3",
+          "confidence": "2",
+          "cweid": "89",
+          "solution": "<p>Use parameterized queries. Never build SQL from user input.</p>",
+          "instances": [
+            {"uri": "http://127.0.0.1:5000/notes/unsafe?q=test", "method": "GET", "param": "q", "attack": "test' AND '1'='1' -- ", "evidence": ""},
+            {"uri": "http://127.0.0.1:5000/notes/unsafe?q=welcome", "method": "GET", "param": "q", "attack": "welcome' OR '1'='1' -- ", "evidence": ""}
+          ]
+        },
+        {
+          "pluginid": "10036",
+          "alert": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+          "name": "Server Leaks Version Information via \"Server\" HTTP Response Header Field",
+          "riskcode": "1",
+          "confidence": "3",
+          "cweid": "497",
+          "solution": "<p>Configure the server to suppress or genericize the Server header.</p>",
+          "instances": [
+            {"uri": "http://127.0.0.1:5000/", "method": "GET", "param": "", "evidence": "Werkzeug/3.1.3 Python/3.12.7"},
+            {"uri": "http://127.0.0.1:5000/health", "method": "GET", "param": "", "evidence": "Werkzeug/3.1.3 Python/3.12.7"},
+            {"uri": "http://127.0.0.1:5000/notes?q=test", "method": "GET", "param": "", "evidence": "Werkzeug/3.1.3 Python/3.12.7"},
+            {"uri": "http://127.0.0.1:5000/robots.txt", "method": "GET", "param": "", "evidence": "Werkzeug/3.1.3 Python/3.12.7"}
+          ]
+        },
+        {
+          "pluginid": "10038",
+          "alert": "Content Security Policy (CSP) Header Not Set",
+          "name": "Content Security Policy (CSP) Header Not Set",
+          "riskcode": "2",
+          "confidence": "3",
+          "cweid": "693",
+          "solution": "<p>Set a Content-Security-Policy header on every response.</p>",
+          "instances": [
+            {"uri": "http://127.0.0.1:5000/", "method": "GET", "param": "", "evidence": ""},
+            {"uri": "http://127.0.0.1:5000/robots.txt", "method": "GET", "param": "", "evidence": ""}
+          ]
+        }
+      ]
+    }
+  ]
+}
