@@ -1,0 +1,33 @@
+priority,due,title,kind,location,cwe,cves,cvss,epss,kev,sources,reason,fix
+P1,2026-11-03,Apache Log4j2 Remote Code Injection (Log4Shell),web,http://10.10.0.15:8983/solr/admin/cores?action,CWE-502,CVE-2021-44228,10.0,1.0,yes,nuclei,listed in CISA KEV: exploited in the wild,Upgrade Log4j to 2.17.1 or later.
+P1,2026-11-03,Error Based SQL Injection,web,http://127.0.0.1:5000/notes/unsafe?q,CWE-89,,9.0,,,zap+nuclei,"critical (scanner rating, no CVSS available)",Use parameterized queries. Never build SQL from user input.
+P2,2026-11-26,Vulnerable dependency requests 2.19.1 (CVE-2018-18074),dependency,requests==2.19.1,,CVE-2018-18074,7.5,0.0693,,pip-audit,high (CVSS 7.5),Upgrade to 2.20.0 or later
+P2,2026-11-26,Vulnerable dependency jinja2 2.10 (CVE-2019-10906),dependency,jinja2==2.10,,CVE-2019-10906,8.6,0.0353,,pip-audit,high (CVSS 8.6),Upgrade to 2.10.1 or later
+P2,2026-11-26,Vulnerable dependency urllib3 1.23 (CVE-2026-21441),dependency,urllib3==1.23,,CVE-2026-21441,7.5,0.0292,,pip-audit,high (CVSS 7.5),Upgrade to 2.6.3 or later
+P2,2026-11-26,Vulnerable dependency urllib3 1.23 (CVE-2019-11324),dependency,urllib3==1.23,,CVE-2019-11324,7.5,0.0291,,pip-audit,high (CVSS 7.5),Upgrade to 1.24.2 or later
+P2,2026-11-26,Vulnerable dependency idna 2.7 (CVE-2024-3651),dependency,idna==2.7,,CVE-2024-3651,7.5,0.0139,,pip-audit,high (CVSS 7.5),Upgrade to 3.7 or later
+P2,2026-11-26,Vulnerable dependency urllib3 1.23 (CVE-2023-43804),dependency,urllib3==1.23,,CVE-2023-43804,8.1,0.0136,,pip-audit,high (CVSS 8.1),Upgrade to 1.26.17 or later
+P2,2026-11-26,Vulnerable dependency jinja2 2.10 (CVE-2024-56326),dependency,jinja2==2.10,,CVE-2024-56326,7.8,0.0052,,pip-audit,high (CVSS 7.8),Upgrade to 3.1.5 or later
+P2,2026-11-26,Generic API Key detected,code,app/app.py:89,CWE-798,,7.5,,,semgrep,"high (scanner rating, no CVSS available)",
+P2,2026-11-26,Detected user input used to manually construct a SQL string. This could lead to SQL injection.,code,app/app.py:98,CWE-89,,7.5,,,semgrep,"high (scanner rating, no CVSS available)",
+P3,2027-01-25,Vulnerable dependency jinja2 2.10 (CVE-2020-28493),dependency,jinja2==2.10,,CVE-2020-28493,5.3,0.0359,,pip-audit,medium (CVSS 5.3),Upgrade to 2.11.3 or later
+P3,2027-01-25,Vulnerable dependency requests 2.19.1 (CVE-2023-32681),dependency,requests==2.19.1,,CVE-2023-32681,6.1,0.0297,,pip-audit,medium (CVSS 6.1),Upgrade to 2.31.0 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2020-26137),dependency,urllib3==1.23,,CVE-2020-26137,6.5,0.0227,,pip-audit,medium (CVSS 6.5),Upgrade to 1.25.9 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2019-11236),dependency,urllib3==1.23,,CVE-2019-11236,6.1,0.0207,,pip-audit,medium (CVSS 6.1),Upgrade to 1.24.3 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2024-37891),dependency,urllib3==1.23,,CVE-2024-37891,4.4,0.0114,,pip-audit,medium (CVSS 4.4),Upgrade to 1.26.19 or later
+P3,2027-01-25,Vulnerable dependency requests 2.19.1 (CVE-2024-47081),dependency,requests==2.19.1,,CVE-2024-47081,5.3,0.0098,,pip-audit,medium (CVSS 5.3),Upgrade to 2.32.4 or later
+P3,2027-01-25,Vulnerable dependency jinja2 2.10 (CVE-2024-34064),dependency,jinja2==2.10,,CVE-2024-34064,5.4,0.0098,,pip-audit,medium (CVSS 5.4),Upgrade to 3.1.4 or later
+P3,2027-01-25,Vulnerable dependency jinja2 2.10 (CVE-2024-22195),dependency,jinja2==2.10,,CVE-2024-22195,5.4,0.0089,,pip-audit,medium (CVSS 5.4),Upgrade to 3.1.3 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2025-66471),dependency,urllib3==1.23,,CVE-2025-66471,5.0,0.0068,,pip-audit,"medium (scanner rating, no CVSS available)",Upgrade to 2.6.0 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2018-25091),dependency,urllib3==1.23,,CVE-2018-25091,6.1,0.0059,,pip-audit,medium (CVSS 6.1),Upgrade to 1.24.2 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2023-45803),dependency,urllib3==1.23,,CVE-2023-45803,4.2,0.0059,,pip-audit,medium (CVSS 4.2),Upgrade to 1.26.18 or later
+P3,2027-01-25,Vulnerable dependency jinja2 2.10 (CVE-2025-27516),dependency,jinja2==2.10,,CVE-2025-27516,5.0,0.0051,,pip-audit,"medium (scanner rating, no CVSS available)",Upgrade to 3.1.6 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2025-50181),dependency,urllib3==1.23,,CVE-2025-50181,5.3,0.0047,,pip-audit,medium (CVSS 5.3),Upgrade to 2.5.0 or later
+P3,2027-01-25,Vulnerable dependency idna 2.7 (CVE-2026-45409),dependency,idna==2.7,,CVE-2026-45409,5.3,0.0041,,pip-audit,medium (CVSS 5.3),Upgrade to 3.15 or later
+P3,2027-01-25,Vulnerable dependency requests 2.19.1 (CVE-2024-35195),dependency,requests==2.19.1,,CVE-2024-35195,5.6,0.0034,,pip-audit,medium (CVSS 5.6),Upgrade to 2.32.0 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2026-97689),dependency,urllib3==1.23,,CVE-2026-97689,5.0,0.0034,,pip-audit,"medium (scanner rating, no CVSS available)",Upgrade to 2.8.0 or later
+P3,2027-01-25,Vulnerable dependency urllib3 1.23 (CVE-2026-44431),dependency,urllib3==1.23,,CVE-2026-44431,5.3,0.0033,,pip-audit,medium (CVSS 5.3),Upgrade to 2.7.0 or later
+P3,2027-01-25,Vulnerable dependency requests 2.19.1 (CVE-2026-25645),dependency,requests==2.19.1,,CVE-2026-25645,5.5,0.0019,,pip-audit,medium (CVSS 5.5),Upgrade to 2.33.0 or later
+P3,2027-01-25,Detected Flask app with debug=True. Do not deploy to production with this flag enabled.,code,app/admin.py:41,CWE-489,,5.0,,,semgrep,"medium (scanner rating, no CVSS available)",
+P3,2027-01-25,Content Security Policy (CSP) Header Not Set,web,http://127.0.0.1:5000,CWE-693,,5.0,,,zap+nuclei,"medium (scanner rating, no CVSS available)",Set a Content-Security-Policy header on every response.
+P4,backlog,"Server Leaks Version Information via ""Server"" HTTP Response Header Field",web,http://127.0.0.1:5000,CWE-497,,3.0,,,zap,"low (scanner rating, no CVSS available)",Configure the server to suppress or genericize the Server header.

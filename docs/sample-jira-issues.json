@@ -1,0 +1,233 @@
+[
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P1] Apache Log4j2 Remote Code Injection (Log4Shell)",
+      "description": "*Priority:* P1 (listed in CISA KEV: exploited in the wild)\n*Location:* {{http://10.10.0.15:8983/solr/admin/cores?action}}\n*Found by:* nuclei\n*Weakness:* CWE-502\n*CVEs:* CVE-2021-44228\n*CVSS:* 10.0 {{CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H}}\n*EPSS:* 100.0%\n*Fix:* Upgrade Log4j to 2.17.1 or later.\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "Highest"
+      },
+      "labels": [
+        "security",
+        "triage-p1",
+        "web"
+      ],
+      "duedate": "2026-11-03"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P1] Error Based SQL Injection",
+      "description": "*Priority:* P1 (critical (scanner rating, no CVSS available))\n*Location:* {{http://127.0.0.1:5000/notes/unsafe?q}}\n*Found by:* zap, nuclei\n*Weakness:* CWE-89\n*Fix:* Use parameterized queries. Never build SQL from user input.\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "Highest"
+      },
+      "labels": [
+        "security",
+        "triage-p1",
+        "web"
+      ],
+      "duedate": "2026-11-03"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency requests 2.19.1 (CVE-2018-18074)",
+      "description": "*Priority:* P2 (high (CVSS 7.5))\n*Location:* {{requests==2.19.1}}\n*Found by:* pip-audit\n*CVEs:* CVE-2018-18074\n*CVSS:* 7.5 {{CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N}}\n*EPSS:* 6.9%\n*Fix:* Upgrade to 2.20.0 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency jinja2 2.10 (CVE-2019-10906)",
+      "description": "*Priority:* P2 (high (CVSS 8.6))\n*Location:* {{jinja2==2.10}}\n*Found by:* pip-audit\n*CVEs:* CVE-2019-10906\n*CVSS:* 8.6 {{CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N}}\n*EPSS:* 3.5%\n*Fix:* Upgrade to 2.10.1 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency urllib3 1.23 (CVE-2026-21441)",
+      "description": "*Priority:* P2 (high (CVSS 7.5))\n*Location:* {{urllib3==1.23}}\n*Found by:* pip-audit\n*CVEs:* CVE-2026-21441\n*CVSS:* 7.5 {{CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H}}\n*EPSS:* 2.9%\n*Fix:* Upgrade to 2.6.3 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency urllib3 1.23 (CVE-2019-11324)",
+      "description": "*Priority:* P2 (high (CVSS 7.5))\n*Location:* {{urllib3==1.23}}\n*Found by:* pip-audit\n*CVEs:* CVE-2019-11324\n*CVSS:* 7.5 {{CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N}}\n*EPSS:* 2.9%\n*Fix:* Upgrade to 1.24.2 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency idna 2.7 (CVE-2024-3651)",
+      "description": "*Priority:* P2 (high (CVSS 7.5))\n*Location:* {{idna==2.7}}\n*Found by:* pip-audit\n*CVEs:* CVE-2024-3651\n*CVSS:* 7.5 {{CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H}}\n*EPSS:* 1.4%\n*Fix:* Upgrade to 3.7 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency urllib3 1.23 (CVE-2023-43804)",
+      "description": "*Priority:* P2 (high (CVSS 8.1))\n*Location:* {{urllib3==1.23}}\n*Found by:* pip-audit\n*CVEs:* CVE-2023-43804\n*CVSS:* 8.1 {{CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N}}\n*EPSS:* 1.4%\n*Fix:* Upgrade to 1.26.17 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Vulnerable dependency jinja2 2.10 (CVE-2024-56326)",
+      "description": "*Priority:* P2 (high (CVSS 7.8))\n*Location:* {{jinja2==2.10}}\n*Found by:* pip-audit\n*CVEs:* CVE-2024-56326\n*CVSS:* 7.8 {{CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H}}\n*EPSS:* 0.5%\n*Fix:* Upgrade to 3.1.5 or later\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "dependency"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Generic API Key detected",
+      "description": "*Priority:* P2 (high (scanner rating, no CVSS available))\n*Location:* {{app/app.py:89}}\n*Found by:* semgrep\n*Weakness:* CWE-798\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "code"
+      ],
+      "duedate": "2026-11-26"
+    }
+  },
+  {
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "[P2] Detected user input used to manually construct a SQL string. This could lead to SQL injection.",
+      "description": "*Priority:* P2 (high (scanner rating, no CVSS available))\n*Location:* {{app/app.py:98}}\n*Found by:* semgrep\n*Weakness:* CWE-89\nClose this ticket only after a rescan confirms the finding is gone.",
+      "priority": {
+        "name": "High"
+      },
+      "labels": [
+        "security",
+        "triage-p2",
+        "code"
+      ],
+      "duedate": "2026-11-26"
+    }
+  }
+]
