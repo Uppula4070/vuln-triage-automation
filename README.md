@@ -17,6 +17,8 @@ $ vulntriage --semgrep semgrep.json --zap zap.json --nuclei nuclei.jsonl --pip-a
   P2  Vulnerable dependency urllib3 1.23 (CVE-2026-21441)     high (CVSS 7.5)
 ```
 
+![Ranked findings table from the sample report: Log4Shell first because it is on the CISA KEV list](docs/report-preview.png)
+
 **→ See the full [sample report](docs/sample-report.md)** and the [Jira payloads](docs/sample-jira-issues.json) it generated.
 
 ## How it works
